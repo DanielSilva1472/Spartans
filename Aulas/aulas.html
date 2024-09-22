@@ -3,20 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academia Spartans</title>
-    <link rel="stylesheet" href="#">
+    <title>Aulas - Academia Spartans</title>
+    <link rel="stylesheet" href="aulas.css">
 </head>
 <body>
     <header>
-<section id="aulas" class="section">
-    <h2>Aulas e Serviços</h2>
-    <ul>
-        <li><a href="#" style="color: #000000">Musculação</a></li>
-        <li><a href="#" style="color: #000000">Yoga</a></li>
-        <li><a href="#" style="color: #000000">Pìlates</a></li>
-        <li><a href="#" style="color: #000000">Treinamento Funcional</a></li>
-    </ul>
-</section>
-</header>
+        <section class="logu">
+            <img src="../images/logospartans.png" class="logu">
+            </section>  
+            <nav>
+                <ul>
+                    <li><a href="../Página inicial/index.html">Home</a></li>
+                    <li><a href="../contato/Sobre.html">FAQ</a></li>
+                    <li><a href="../Login/login.html">Minha Conta</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="products">
+            <div class="filters">
+                <h2>E aí, que tal um treininho?</h2>
+                <p>Escolha o treino que você mais gosta aqui!</p>
+                <input type="text" id="search-input" placeholder="Buscar aulas...">
+                <select id="category-filter" multiple>
+                    <option value="m">Musculação</option>
+                    <option value="y">Yoga</option>
+                    <option value="p">Pìlates</option>
+                    <option value="d">Dança</option>
+                </select>
+            </div>
+
+            <div class="product-list">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Academia Spartans. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="aulas.js"></script>
 </body>
 </html>

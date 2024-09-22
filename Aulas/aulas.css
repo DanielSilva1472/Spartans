@@ -6,7 +6,7 @@ body {
 }
 
 header {
-    background-image:url(backgroundspartans.png);
+    background-image:url(../images/backgroundspartans.png);
     padding: 0;
     text-align: auto;
     display: flex;

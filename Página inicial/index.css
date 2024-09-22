@@ -1,0 +1,373 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #1b1b1b;
+    width: auto;
+    height: auto;
+    color: #ffffff;
+}
+.bmvd h2{
+  font-family: DM Sans, sans-serif;
+  font-weight: 900;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+}
+.bmvd span{
+  font-family: DM Sans, sans-serif;
+  font-weight: 900;
+  font-size: 30px;
+  color: #ffad12;
+  text-align: center;
+}
+
+#popup{
+  display: none;
+  width: 1000px;
+  height: 600px;
+  background-color: #000000;
+  color: rgb(255, 250, 250);
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  border: 1px solid rgb(255, 0, 0);
+  border-radius: 15px;
+  text-align: center;
+}
+#popup img{
+  width: 800px;
+  height: 400px;
+}
+
+#closebtn{
+    width: 80px;
+    height: 30px;
+    border: 3px solid rgb(255, 60, 0);
+    border-radius: 15px;
+    transition: all 0.3s;
+    cursor: pointer;
+    background: rgb(218, 218, 218);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+#closebtn:hover {
+  background: #000000;
+  color: white;
+  font-size: 15px;
+}
+h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 40px;  
+}
+h3{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 40px;
+}
+p{  font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+
+}
+header {
+    background-image:url(../images/backgroundspartans.png);
+    text-align: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    height: 200px;
+}
+.btn {
+    width: 100px;
+    height: 40px;
+    border: 3px solid rgb(255, 60, 0);
+    border-radius: 15px;
+    transition: all 0.3s;
+    cursor: pointer;
+    background: rgb(218, 218, 218);
+    font-size: 1.2em;
+    font-weight: 500;
+  }
+.btn:hover {
+    background: #000000;
+    color: white;
+    font-size: 1.5em;
+}
+
+/*#checkbox {
+    display: none;
+    align-items: left;
+  }
+  
+  .toggle {
+    position:relative;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    justify-content: center;
+    gap: 10px;
+    transition-duration: .5s;
+  }
+  
+  .barras {
+    width: 100%;
+    height: 4px;
+    background-color: rgb(255, 151, 23);
+    border-radius: 4px;
+    align-items: right;
+  }
+  
+  #barra2 {
+    transition-duration: .8s;
+  }
+  
+  #barra1,#barra2,#barra3 {
+    width: 70%;
+  }
+  
+  #checkbox:checked + .toggle .barras {
+    position: absolute;
+    transition-duration: .5s;
+  }
+
+  #checkbox:checked + .toggle #barra1 {
+    width: 100%;
+    transform: rotate(45deg);
+    transition-duration: .5s;
+  }
+  #checkbox:checked + .toggle #barra2 {
+    transform: scaleX(0);
+    transition-duration: .5s;
+  }
+  
+  #checkbox:checked + .toggle #barra3 {
+    width: 100%;
+    transform: rotate(-45deg);
+    transition-duration: .5s;
+  }
+  
+  #checkbox:checked + .toggle {
+    transition-duration: .5s;
+    transform: rotate(180deg);
+  }*/
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    color: #ffffff;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: 3rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  overflow: hidden;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.carousel img {
+  width: 100%;
+  display: block;
+}
+
+.carousel p{
+  text-align: center;
+  padding: 1rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 25px ;
+}
+
+.container h2 {
+    padding: 0px;
+    text-align: center;
+}
+.container p {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.section {
+    margin-bottom: 2rem;
+    display: block;
+    text-align:left;
+}
+.plan {
+  border-radius: 16px;
+  box-shadow: 0 30px 30px -25px rgba(0, 38, 255, 0.205);
+  padding: 10px;
+  background-color: #fff;
+  color: #697e91;
+  max-width: 300px;
+}
+
+.plan strong {
+  font-weight: 600;
+  color: #425275;
+}
+
+.plan .inner {
+  align-items: center;
+  padding: 20px;
+  padding-top: 40px;
+  background-color: #ecf0ff;
+  border-radius: 12px;
+  position: relative;
+}
+
+.plan .pricing {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #bed6fb;
+  border-radius: 99em 0 0 99em;
+  display: flex;
+  align-items: center;
+  padding: 0.625em 0.75em;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #425475;
+}
+
+.plan .pricing small {
+  color: #707a91;
+  font-size: 0.75em;
+  margin-left: 0.25em;
+}
+
+.plan .title {
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #425675;
+}
+
+.plan .title + * {
+  margin-top: 0.75rem;
+}
+
+.plan .info + * {
+  margin-top: 1rem;
+}
+
+.plan .features {
+  display: flex;
+  flex-direction: column;
+}
+
+.plan .features li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.plan .features li + * {
+  margin-top: 0.75rem;
+}
+
+.plan .features .icon {
+  background-color: #1FCAC5;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+
+.plan .features .icon svg {
+  width: 14px;
+  height: 14px;
+}
+
+.plan .features + * {
+  margin-top: 1.25rem;
+}
+
+.plan .action {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.plan .button {
+  background-color: #6558d3;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.125rem;
+  text-align: center;
+  border: 0;
+  outline: 0;
+  width: 100%;
+  padding: 0.625em 0.75em;
+  text-decoration: none;
+}
+
+.plan .button:hover, .plan .button:focus {
+  background-color: #4133B7;
+}
+
+.logu {
+    width: 150px;
+    height: 150px;
+}
+footer {
+    background-image:url(../images/backgroundspartans.png);
+    color: white;
+    text-align: center;
+    width: auto;
+    height: 300px;
+}
+.b {
+    display: inline;
+    text-align:center;
+}
+.a { 
+    width: 150px;
+    height: 100px;
+    display: block;
+    text-align: left;
+}
