@@ -1,4 +1,5 @@
-document.addEventListener('DOMContentLoaded', function() {            const products = [
+document.addEventListener('DOMContentLoaded', function() {     //O código dentro deste listener é executado assim que o conteúdo do DOM é carregado           
+    const products = [
     { id: 1, name: 'Treino para braço', category: ['m'], description: 'Simples e eficiente, ideal para iniciantes e experientes.', image:'../images/m1.png' },
     { id: 2, name: 'Hatha Yoga', category: ['y'], description: 'Dedicado a prática de posturas e exercícios de respiração.', image:'../images/y1.png' },
     { id: 3, name: 'Jazz', category: ['d'], description: 'Perfeito para pessoas de todas as idades', image:'../images/d1.png' },
@@ -16,15 +17,15 @@ document.addEventListener('DOMContentLoaded', function() {            const prod
     { id: 15, name: 'o', category: ['d'], description: 'o', image:'../images/d4.png' },
     { id: 16, name: 'Treino para costas ', category: ['m'], description: 'Diversas opções e maneiras de realizar este treino', image:'../images/m4.png' }
 ];
+//product list define um array para pegar as informações  ID, nome, categoria, descrição e imagem
+const productList = document.querySelector('.product-list'); //Seleciona o elemento que vai exibir a lista de produtos.
+const categoryFilter = document.getElementById('category-filter');// Seleciona o filtro de categorias
+const searchInput = document.getElementById('search-input'); //Seleciona o campo de busca
 
-const productList = document.querySelector('.product-list');
-const categoryFilter = document.getElementById('category-filter');
-const searchInput = document.getElementById('search-input');
-
-function displayProducts(products) {
+function displayProducts(products) { //recebe uma lista de produtos e atualiza o productList
     productList.innerHTML = '';
     products.forEach(product => {
-        const productItem = document.createElement('div');
+        const productItem = document.createElement('div'); //cria um novo elemento div, define as classes e insere a imagem, nome e descrição do produto (a cada produto)
         productItem.className = 'product-item';
         productItem.innerHTML = `
             <img src="${product.image}" alt="${product.name}">
@@ -37,7 +38,10 @@ function displayProducts(products) {
     });
 }
 
-function filterProducts(categories, search) {
+function filterProducts(categories, search) { //Filtra a lista de produtos com base nas categorias selecionadas e no texto de busca
+//Se categorias forem selecionadas, aplica um filtro que retorna apenas os produtos que pertencem a essas categorias
+//Se houver um texto de busca, aplica um filtro adicional para encontrar o nome do produto  
+    //Chama as funcões de categoria e busca pra paresentar o resultado 
     let filteredProducts = products;
 
     if (categories.length > 0 && !categories.includes('all')) {
@@ -64,4 +68,5 @@ searchInput.addEventListener('input', function() {
 });
 
 displayProducts(products);
+    // é chamado para mostrar todos os produtos de novo quando carregar a página
 });
