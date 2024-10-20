@@ -21,12 +21,12 @@ function showSlide(index) {
 }
 
 function nextSlide() {
-    /chama show slide para mostrar o próximo slide
+    //chama show slide para mostrar o próximo slide
     showSlide(currentIndex + 1);
 }
 
 showSlide(currentIndex);
-    /chama o próximo slide após 3 segundos
+    //chama o próximo slide após 3 segundos
 setInterval(nextSlide, 3000);
 
 //Popup
@@ -45,3 +45,23 @@ function temporizador() {
     };
 }
 temporizador();
+// Api de geolocalização
+src="https://unpkg.com/leaflet/dist/leaflet.js"
+
+var map = L.map('map').setView([-24.005586559371565, -46.44287364332788], 13);
+
+// Camada de mapa
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+// Marcador no mapa
+        function addMark(coordenadas, textoPopup) {
+            L.marker(coordenadas).addTo(map)
+                .bindPopup(textoPopup)
+                .openPopup();
+        }
+
+// Localização da academia
+        addMark([-24.005586559371565, -46.44287364332788], 'Academia Spartans');
+        map.setZoom(48);

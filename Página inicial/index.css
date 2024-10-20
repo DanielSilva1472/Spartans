@@ -256,3 +256,12 @@ footer {
     display: block;
     text-align: left;
 }
+#map {
+  height: 300px; 
+  width: 500px;
+  margin: auto;
+  display: flex;
+  padding: 0px;
+  text-align: center;
+
+}
