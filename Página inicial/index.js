@@ -42,7 +42,7 @@ function temporizador() {
 temporizador();
 
 // API de geolocalização
-const script = document.createElement('script'); // Corrigido de 'scripts' para 'script'
+const script = document.createElement('script');
 script.src = "https://unpkg.com/leaflet/dist/leaflet.js";
 document.head.appendChild(script);
 script.onload = () => {
@@ -51,7 +51,7 @@ script.onload = () => {
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '© OpenStreetMap contributors'
     }).addTo(map);
-
+// marcador
     function addMark(coordenadas, textoPopup) {
         L.marker(coordenadas).addTo(map)
             .bindPopup(textoPopup)
