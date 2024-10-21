@@ -1,7 +1,7 @@
 /* Definindo as cores principais */
 :root {
     --cor-preta: #000000;
-    --cor-laranja: #f58220;
+    --cor-laranja: red;
     --cor-branca: #ffffff;
     --cor-cinza: #f2f2f2;
 }
@@ -128,7 +128,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-    background-color: #d4741b;
+    background-color:red;
 }
 
 /* Mensagens de sucesso ou erro */
