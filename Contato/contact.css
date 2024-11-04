@@ -1,0 +1,206 @@
+/* Definindo as cores principais */
+:root {
+    --cor-preta: #000000;
+    --cor-laranja: #DC2626;
+    --cor-branca: #f5f5fa;
+    --cor-cinza: #D1D5DB;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logu {
+    width: 150px;
+    height: 150px;
+}
+
+.btn {
+    padding: 17px 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 0;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all 0.5s ease;
+  }
+  
+  .btn:hover {
+    letter-spacing: 3px;
+    background-color: #DC2626;
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(220, 24, 34) 0px 7px 29px 0px;
+  }
+  
+  .btn:active {
+    letter-spacing: 3px;
+    background-color: #DC2626;
+    color: hsl(0, 0%, 100%);
+    box-shadow: #DC2626 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 100ms;
+  }
+
+body {
+    font-family: Verdana, sans-serif;
+    background-color: var(--cor-cinza);
+    color: var(--cor-branca);
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: var(--cor-preta);
+    text-align: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: fixed;
+    height: fixed;
+}
+
+header h1 {
+    color: var(--cor-laranja);
+    font-size: 2rem;
+    float: left;
+    margin-bottom: 5px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color:var(--cor-preta);
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: var(--cor-laranja);
+}
+
+/* Estilo da seção de contato */
+main {
+    padding: 40px;
+    background: url(../images/backgroundspartans.png);
+    min-height: calc(100vh - 160px);
+}
+
+#contato h2 {
+    color: var(--cor-laranja);
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#contato p {
+    color: var(--cor-branca);
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--cor-cinza);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    color: var(--cor-preta);
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    
+    padding: 5px 12px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #24292e;
+    vertical-align: middle;
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    outline: none;
+    box-shadow: rgba(225, 228, 232, 0.2) 0px 1px 0px 0px inset;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #DC2626;
+    outline: none;
+    box-shadow: rgba(214, 3, 3, 0.3) 0px 0px 0px 3px;
+}
+
+textarea {
+    height: 150px;
+    resize: none;
+}
+
+/* Botão de enviar */
+button[type="submit"] {
+    background-color: var(--cor-laranja);
+    color: var(--cor-branca);
+    border: none;
+    padding: 5px 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    border-radius: 6px;
+}
+
+button[type="submit"]:hover {
+    background-color:#DC2626;
+}
+
+/* Mensagens de sucesso ou erro */
+.status-mensagem {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.status-mensagem.success {
+    color: var(--cor-laranja);
+}
+
+.status-mensagem.error {
+    color: #DC2626;
+}
+
+/* Estilo do rodapé */
+footer {
+    background-color: var(--cor-preta);
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    color: var(--cor-branca);
+    font-size: 1rem;
+}
