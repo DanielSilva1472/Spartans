@@ -3,65 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato - Academia Spartans</title>
-    <link rel="stylesheet" href="contact.css">
+    <title>Perguntas Frequentes - Gráfico de Pizza</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+
+        #chart-container {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            width: 200px;
+            height: 200px;
+        }
+
+        canvas {
+            background-color: #333;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <section class="logu">
-            <img src="../images/SPARTANPNG.png" class="logu" alt="Logo da Academia Spartans">
-        </section>
-        <nav>
-            <ul>
-                <li><a href="../Página inicial/index.html"><button class="btn">Home</button></a></li>
-                <li><a href="../Aulas/aulas.html"><button class="btn">Aulas</button></a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section id="contato">
-            <h2>Entre em Contato com a Academia Spartans</h2>
-            <h2>Fale Conosco</h2>
-            <p>Se você tiver qualquer dúvida ou quiser mais informações, preencha o formulário abaixo que entraremos em contato o mais breve possível.</p>
-            
-            <form id="form-contato">
-                <div class="form-group">
-                    <label for="nome">Nome:</label>
-                    <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
-                </div>
+    <div id="chart-container">
+        <canvas id="myPieChart"></canvas>
+    </div>
 
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
-                </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('myPieChart').getContext('2d');
+        const myPieChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['Como fazer login', 'Como cancelar o plano', 'Como comprar seu plano'],
+                datasets: [{
+                    data: [35, 30, 35], // Distribuição de porcentagem (ajuste conforme necessário)
+                    backgroundColor: ['#888888', '#888888', '#888888'], // Cor das fatias
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: 'white', // Cor da legenda
+                        }
+                    },
+                    tooltip: {
+                        backgroundColor: 'black',
+                        titleColor: 'white',
+                        bodyColor: 'white'
+                    }
+                }
+            }
+        });
+    </script>
 
-                <div class="form-group">
-                    <label for="telefone">Telefone:</label>
-                    <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX XXXX" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="assunto">Assunto:</label>
-                    <input type="text" id="assunto" name="assunto" placeholder="Digite o assunto" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="mensagem">Mensagem:</label>
-                    <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem" required></textarea>
-                </div>
-
-                <button type="submit">Enviar</button>
-            </form>
-
-            <div id="status-mensagem" class="status-mensagem"></div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Academia Spartans - Todos os direitos reservados.</p>
-    </footer>
-
-    <script src="contact.js"></script>
 </body>
 </html>
